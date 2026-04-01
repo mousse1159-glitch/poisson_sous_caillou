@@ -147,3 +147,7 @@ button {
 
   text-align: center;
 }
+
+.hidden-step {
+  display: none;
+}

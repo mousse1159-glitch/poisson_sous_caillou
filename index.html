@@ -83,28 +83,45 @@
 
 <div id="popup-green" class="modal" style="display:none;">
   <div class="modal-content">
+    <div id="green-steps">
     <p>Plein d’écrans endommagés... On distingue mal l’algue mutante,
       elle a l'air immense... D’où vient elle ? Comment s’en débarrasser ?</p>
+    <p class="hidden-step">➡ Piocher les cartes 6, 17 et 22 </p>
+
+    </div>
   </div>
 </div>
 
 <div id="popup-orange" class="modal" style="display:none;">
   <div class="modal-content">
+    <div id="orange-steps">
     <p>Un écran montrant les taux d’oxygène, d’essence…
       On est mal… Combien de temps il nous reste ? </p>
+      <p class="hidden-step">➡ Ouah ! Impressionnants tous ces boutons… Y en a toujours eu autant ?</p>
+    </div>
   </div>
 </div>
 
+
 <div id="popup-pink" class="modal" style="display:none;">
   <div class="modal-content">
+    <div id="pink-steps">
     <p> Le “guidon”, si on force un peu… Peut-être qu’on pourrait réussir à se dégager ?</p>
+    <p class="hidden-step">➡ Piocher la carte 56...</p>
+
+    </div>
   </div>
 </div>
 
 <div id="popup-blue" class="modal" style="display:none;">
   <div class="modal-content">
+    <div id="blue-steps">
     <p>Un tiroir avec plein de recherches que l’on a déjà fait…
       Peut être qu’on va trouver des indices. Mais on a pas la clé…</p>
+    <p class="hidden-step">➡ Piocher la carte 32 et 11 </p>
+
+    </div>
+
   </div>
 </div>
 
@@ -271,30 +288,16 @@
   function closePopup(name) {
     document.getElementById("popup-" + name).style.display = "none";
   }
-
   function updateRemainingPopups() {
-    // Exemple d’évolution des énigmes
 
-    const orange = document.querySelector("#popup-orange p");
-    const blue = document.querySelector("#popup-blue p");
-    const pink = document.querySelector("#popup-pink p");
+    if (!selectedButton) return;
 
-    if (selectedButton === "green") {
-      orange.textContent += " ➜ Piocher la carte 14";
-      blue.textContent += " ➜ Piocher la carte 56";
-    }
+    const hiddenElements = document.querySelectorAll(".hidden-step");
 
-    if (selectedButton === "orange") {
-      orange.textContent += " ➜ Piocher la carte 32";
-    }
+    hiddenElements.forEach(el => {
+      el.style.display = "block";
+    });
 
-    if (selectedButton === "pink") {
-      pink.textContent += " ➜ Observer les chiffres cachés";
-    }
-
-    if (selectedButton === "blue") {
-      orange.textContent += " ➜ Le temps est la clé";
-    }
   }
 
 
