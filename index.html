@@ -134,21 +134,6 @@
       document.getElementById("codeDisplayModal").textContent = enteredCode;
     }
   }
-
-  function checkCode() {
-    const message = document.getElementById("message");
-
-    if (enteredCode === "1234") {
-      message.textContent = "✅ Code correct !";
-    } else {
-      message.textContent = "❌ Code incorrect.";
-    }
-
-    enteredCode = "";
-    document.getElementById("codeDisplay").textContent = "----";
-    document.getElementById("codeDisplayModal").textContent = "----";
-  }
-
   updateDisplay();
 </script>
 
