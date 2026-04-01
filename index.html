@@ -115,6 +115,15 @@
   </div>
 </div>
 
+<div id="popup-indice" class="modal" style="display:none;">
+  <div class="modal-content">
+    <p id="indice-text"></p>
+
+    <!-- ✅ bouton fermer -->
+    <button onclick="closePopup('indice')">Fermer</button>
+  </div>
+</div>
+
 <script>
   let timeLeft = 35 * 60;
   let timerInterval = null;
@@ -221,26 +230,66 @@
       return;
     }
 
-    // cacher le bouton sur la map
     const btn = document.querySelector(`.map-btn.${selectedButton}`);
     if (btn) btn.style.display = "none";
 
-    // fermer la popup
-    closePopup(selectedButton);
-
     buttonAlreadyRemoved = true;
 
-    // cacher le bouton "Supprimer"
     document.getElementById("removeBtn").style.display = "none";
 
-    // afficher la suite
-    openPopup("enigme");
-    document.querySelector("#popup-enigme p").textContent =
-            "Jetez les cartes 14, 56 et 32";
+    // 🔥 AJOUT ICI
+    updateRemainingPopups();
+
+    let message = "";
+
+    if (selectedButton === "green") {
+      message = "Jetez les cartes 6, 17, 22 et 4";
+    }
+
+    if (selectedButton === "orange") {
+      message = "";
+    }
+
+    if (selectedButton === "pink") {
+      message = "OUF ! Heureusement que vous avez pas fait ça... " +
+              "Jetez la carte 14";
+    }
+
+    if (selectedButton === "blue") {
+      message = "Jetez les cartes 32, 11 et 43";
+    }
+
+    openPopup("indice");
+    document.getElementById("indice-text").textContent = message;
   }
 
   function closePopup(name) {
     document.getElementById("popup-" + name).style.display = "none";
+  }
+
+  function updateRemainingPopups() {
+    // Exemple d’évolution des énigmes
+
+    const orange = document.querySelector("#popup-orange p");
+    const blue = document.querySelector("#popup-blue p");
+    const pink = document.querySelector("#popup-pink p");
+
+    if (selectedButton === "green") {
+      orange.textContent += " ➜ Piocher la carte 14";
+      blue.textContent += " ➜ Piocher la carte 56";
+    }
+
+    if (selectedButton === "orange") {
+      orange.textContent += " ➜ Piocher la carte 32";
+    }
+
+    if (selectedButton === "pink") {
+      pink.textContent += " ➜ Observer les chiffres cachés";
+    }
+
+    if (selectedButton === "blue") {
+      orange.textContent += " ➜ Le temps est la clé";
+    }
   }
 
 
