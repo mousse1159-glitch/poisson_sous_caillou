@@ -1,95 +1,157 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css" type="text/css" media="screen" />
-    <title>Unlock!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Poisson sous caillou</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main id="game-container">
-        <div id="scene" class="scene active">
 
-            <!-- Header -->
-            <header class="game-header">
-                <div class="logo-area">
-                    <span class="logo-text">UNLOCK<span class="logo-bang">!</span></span>
-                    <span class="logo-sub">ESCAPE ADVENTURES</span>
-                </div>
-                <div class="header-right">
-                    <span class="scenario-name">Scénario 1</span>
-                </div>
-            </header>
+<!-- MENU PRINCIPAL -->
+<div id="menu" class="panel">
+  <h2>POISSON SOUS CAILLOU</h2>
+  <p>Choisissez une action</p>
 
-            <!-- Main timer zone -->
-            <div class="timer-zone">
-                <div class="timer-glow-ring" id="glowRing">
-                    <div class="timer-inner">
-                        <div class="timer-label">TEMPS RESTANT</div>
-                        <div class="timer-display" id="timerDisplay">35:00</div>
-                        <div class="timer-progress-bar">
-                            <div class="timer-progress-fill" id="progressFill"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <button onclick="startGame()">▶ Démarrer</button>
+  <button onclick="showRules()">❓ Règles</button>
+</div>
 
-            <!-- Controls -->
-            <div class="controls">
-                <button class="btn-start" id="startBtn" onclick="toggleTimer()">
-                    <span class="btn-icon" id="btnIcon">▶</span>
-                    <span class="btn-label" id="btnLabel">DÉMARRER</span>
-                </button>
-                <button class="btn-reset" id="resetBtn" onclick="resetTimer()">
-                    <span class="btn-icon">↺</span>
-                    <span class="btn-label">RESET</span>
-                </button>
-            </div>
+<!-- JEU -->
+<div id="game" class="panel" style="display:none;">
 
-            <!-- Penalty zone -->
-            <div class="penalty-zone">
-                <div class="penalty-title">PÉNALITÉS</div>
-                <div class="penalty-controls">
-                    <button class="penalty-btn" onclick="addPenalty()">+ 2 MIN</button>
-                    <div class="penalty-count" id="penaltyCount">0</div>
-                    <div class="penalty-label">pénalités</div>
-                </div>
-            </div>
+  <h2>POISSON SOUS CAILLOU</h2>
 
-            <!-- Bottom atmosphere bar -->
-            <div class="atmosphere-bar">
-                <div class="atm-item">
-                    <span class="atm-icon">🔒</span>
-                    <span class="atm-text">VERROUS</span>
-                    <span class="atm-val" id="locksFound">0</span>
-                </div>
-                <div class="atm-divider"></div>
-                <div class="atm-item">
-                    <span class="atm-icon">💡</span>
-                    <span class="atm-text">INDICES</span>
-                    <span class="atm-val" id="hintsUsed">0</span>
-                </div>
-            </div>
+  <!-- TIMER EN HAUT -->
+  <div class="top-bar">
+    <div class="timer" id="timer">35:00</div>
+  </div>
 
-        </div>
+  <!-- ZONE PRINCIPALE -->
+  <div class="game-container">
 
-        <div id="inventory" class="inventory"></div>
+    <!-- MAP -->
+    <div class="map">
+  <img src="map.png" alt="Carte du jeu">
+</div>
 
-        <!-- Overlay fin de partie -->
-        <div class="end-overlay" id="endOverlay">
-            <div class="end-box">
-                <div class="end-icon">⏱</div>
-                <div class="end-title">TEMPS ÉCOULÉ !</div>
-                <div class="end-sub">La mission a échoué.</div>
-                <button class="btn-start" onclick="resetTimer()">
-                    <span class="btn-icon">↺</span>
-                    <span class="btn-label">RECOMMENCER</span>
-                </button>
-            </div>
-        </div>
-    </main>
+    <!-- MENU LATÉRAL -->
+    <div class="sidebar">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="pauseTimer()">Pause</button>
+      <button onclick="openKeypad()">🔢 Code</button>
+      <button onclick="goBackMenu()">⬅ Retour</button>
+    </div>
 
-    <script src="main.js"></script>
+  </div>
+
+  <div class="message" id="message"></div>
+
+</div>
+
+<!-- POPUP KEYPAD -->
+<div id="keypadModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Entrer le code</h3>
+
+    <div id="codeDisplayModal">----</div>
+
+    <div class="keypad">
+      <button onclick="addDigit('1')">1</button>
+      <button onclick="addDigit('2')">2</button>
+      <button onclick="addDigit('3')">3</button>
+      <button onclick="addDigit('4')">4</button>
+      <button onclick="addDigit('5')">5</button>
+      <button onclick="addDigit('6')">6</button>
+      <button onclick="addDigit('7')">7</button>
+      <button onclick="addDigit('8')">8</button>
+      <button onclick="addDigit('9')">9</button>
+      <button onclick="addDigit('0')">0</button>
+    </div>
+
+    <button onclick="closeKeypad()">Fermer</button>
+  </div>
+</div>
+
+<script>
+  let timeLeft = 35 * 60;
+  let timerInterval = null;
+  let enteredCode = "";
+
+  function startGame() {
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("game").style.display = "block";
+  }
+
+  function goBackMenu() {
+    document.getElementById("menu").style.display = "block";
+    document.getElementById("game").style.display = "none";
+  }
+
+  function showRules() {
+    alert("Entrez le bon code avant la fin du temps !");
+  }
+
+  function updateDisplay() {
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+    document.getElementById("timer").textContent =
+      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+
+  function startTimer() {
+    if (timerInterval) return;
+
+    timerInterval = setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        updateDisplay();
+      } else {
+        clearInterval(timerInterval);
+        document.getElementById("message").textContent = "⏰ Temps écoulé !";
+      }
+    }, 1000);
+  }
+
+  function pauseTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+
+  // 🔓 ouverture / fermeture popup
+  function openKeypad() {
+    document.getElementById("keypadModal").style.display = "flex";
+  }
+
+  function closeKeypad() {
+    document.getElementById("keypadModal").style.display = "none";
+  }
+
+  function addDigit(digit) {
+    if (enteredCode.length < 4) {
+      enteredCode += digit;
+      document.getElementById("codeDisplay").textContent = enteredCode;
+      document.getElementById("codeDisplayModal").textContent = enteredCode;
+    }
+  }
+
+  function checkCode() {
+    const message = document.getElementById("message");
+
+    if (enteredCode === "1234") {
+      message.textContent = "✅ Code correct !";
+    } else {
+      message.textContent = "❌ Code incorrect.";
+    }
+
+    enteredCode = "";
+    document.getElementById("codeDisplay").textContent = "----";
+    document.getElementById("codeDisplayModal").textContent = "----";
+  }
+
+  updateDisplay();
+</script>
+
 </body>
 </html>
+
