@@ -15,7 +15,9 @@ body {
   border: 2px solid #00ff88;
   padding: 20px;
   border-radius: 15px;
-  width: 320px;
+  width: 90vw;      /* prend presque toute la largeur écran */
+  max-width: 1200px;
+  }
   text-align: center;
   box-shadow: 0 0 20px #00ff88;
 }
@@ -71,19 +73,23 @@ button {
 
 .game-container {
   display: flex;
-  height: 50vh;
+  height: 60vh;
 }
 
 
 /* MAP = 70% */
 .map {
   position: relative;
+  flex: 1;              /* prend tout l’espace dispo */
 }
+
 
 
 /* IMAGE DE LA MAP */
 .map img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;  /* garde les proportions */
 }
 
 /* Boutons sur la map */
@@ -106,19 +112,25 @@ button {
 /* MENU LATÉRAL */
 /* SIDEBAR = 30% */
 .sidebar {
-  flex: 3; /* 30% */
-  background: #333;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
+  width: 200px;
+  min-width: 200px;
 }
 
 .sidebar button {
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
+  display: block;
+
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;  /* évite bugs de taille */
+
+  font-size: 14px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
+
 
 .modal-content {
   background: white;
