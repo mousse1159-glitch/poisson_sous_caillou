@@ -119,3 +119,17 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  width: 300px;        /* largeur fixe */
+  max-width: 90%;      /* responsive mobile */
+
+  max-height: 400px;   /* hauteur max */
+  overflow-y: auto;    /* scroll si texte trop long */
+
+  text-align: center;
+}
