@@ -24,7 +24,7 @@
 
   <!-- TIMER EN HAUT -->
   <div class="top-bar">
-    <div class="timer" id="timer">35:00</div>
+    <div class="timer" id="timer" style="visibility: hidden;">35:00</div>
     <p>⌛</p>
   </div>
 
@@ -196,16 +196,21 @@
   }
 
   function checkCode() {
-    if (enteredCode === "56") {
+    if (enteredCode === "14") {
+      // 👉 action spéciale
+      document.getElementById("timer").style.visibility = "visible";
+    }
+
+    else if (enteredCode === "56") {
       closeKeypad();
-      openPopup("enigme"); // 👉 ouvre la popup associée
-    } else {
+      openPopup("enigme");
+    }
+
+    else {
       alert("❌ Mauvais code !");
     }
 
-    // reset du code après validation
     enteredCode = "";
-    document.getElementById("codeDisplayModal").textContent = "----";
   }
 
   function openPopup(name) {
