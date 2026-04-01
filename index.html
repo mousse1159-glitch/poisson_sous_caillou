@@ -185,12 +185,12 @@
   function addDigit(digit) {
     if (enteredCode.length < 4) {
       enteredCode += digit;
-      document.getElementById("codeDisplayModal").textContent = enteredCode.padEnd(4, "-");
+      document.getElementById("codeDisplayModal").textContent = enteredCode.padEnd(4);
     }
   }
 
 
-  function openPopup(color) {
+  function openPopup(popup) {
 
     // 🔒 Fermer toutes les popups
     const popups = document.querySelectorAll("[id^='popup-']");
@@ -199,11 +199,11 @@
     });
 
     // ✅ Ouvrir celle cliquée
-    document.getElementById("popup-" + color).style.display = "flex";
+    document.getElementById("popup-" + popup).style.display = "flex";
   }
 
-  function closePopup(color) {
-    document.getElementById("popup-" + color).style.display = "none";
+  function closePopup(popup) {
+    document.getElementById("popup-" + popup).style.display = "none";
   }
 
   function checkCode() {
