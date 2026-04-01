@@ -79,32 +79,31 @@
 
 <div id="popup-green" class="modal" style="display:none;">
   <div class="modal-content">
-    <h3>Point vert</h3>
-    <p>Contenu du point vert</p>
+    <p>Plein d’écrans endommagés... On distingue mal l’algue mutante,
+      elle a l'air immense... D’où vient elle ? Comment s’en débarrasser ?</p>
     <button onclick="closePopup('green')">Fermer</button>
   </div>
 </div>
 
 <div id="popup-orange" class="modal" style="display:none;">
   <div class="modal-content">
-    <h3>Point orange</h3>
-    <p>Contenu du point orange</p>
+    <p>Un écran montrant les taux d’oxygène, d’essence…
+      On est mal… Combien de temps il nous reste ? </p>
     <button onclick="closePopup('orange')">Fermer</button>
   </div>
 </div>
 
 <div id="popup-pink" class="modal" style="display:none;">
   <div class="modal-content">
-    <h3>Point rose</h3>
-    <p>Contenu du point rose</p>
+    <p> Le “guidon”, si on force un peu… Peut-être qu’on pourrait réussir à se dégager ?</p>
     <button onclick="closePopup('pink')">Fermer</button>
   </div>
 </div>
 
 <div id="popup-blue" class="modal" style="display:none;">
   <div class="modal-content">
-    <h3>Point bleu</h3>
-    <p>Contenu du point bleu</p>
+    <p>Un tiroir avec plein de recherches que l’on a déjà fait…
+      Peut être qu’on va trouver des indices. Mais on a pas la clé…</p>
     <button onclick="closePopup('blue')">Fermer</button>
   </div>
 </div>
@@ -183,6 +182,14 @@
 
 
   function openPopup(color) {
+
+    // 🔒 Fermer toutes les popups
+    const popups = document.querySelectorAll("[id^='popup-']");
+    popups.forEach(popup => {
+      popup.style.display = "none";
+    });
+
+    // ✅ Ouvrir celle cliquée
     document.getElementById("popup-" + color).style.display = "flex";
   }
 
