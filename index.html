@@ -11,9 +11,8 @@
 <!-- MENU PRINCIPAL -->
 <div id="menu" class="panel">
   <h2>POISSON SOUS CAILLOU</h2>
-  <p>Choisissez une action</p>
 
-  <button onclick="startGame()">▶ Démarrer</button>
+  <button onclick="startGame()">▶ START</button>
   <button onclick="showRules()">❓ Règles</button>
 </div>
 
@@ -37,8 +36,7 @@
 
     <!-- MENU LATÉRAL -->
     <div class="sidebar">
-      <button onclick="startTimer()">Start</button>
-      <button onclick="pauseTimer()">Pause</button>
+      <button id="pauseBtn" onclick="pauseTimer()">Pause</button>
       <button onclick="openKeypad()">🔢 Code</button>
       <button onclick="goBackMenu()">⬅ Retour</button>
     </div>
@@ -81,6 +79,8 @@
   function startGame() {
     document.getElementById("menu").style.display = "none";
     document.getElementById("game").style.display = "block";
+
+    startTimer(); // 👈 AJOUT ICI
   }
 
   function goBackMenu() {
@@ -89,7 +89,7 @@
   }
 
   function showRules() {
-    alert("Entrez le bon code avant la fin du temps !");
+    alert("Lisez la carte d'introduction et appuyez sur START");
   }
 
   function updateDisplay() {
@@ -114,8 +114,16 @@
   }
 
   function pauseTimer() {
-    clearInterval(timerInterval);
-    timerInterval = null;
+    const btn = document.getElementById("pauseBtn");
+
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      btn.textContent = "▶ Reprendre";
+    } else {
+      startTimer();
+      btn.textContent = "⏸ Pause";
+    }
   }
 
   // 🔓 ouverture / fermeture popup
