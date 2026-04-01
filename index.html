@@ -25,6 +25,7 @@
   <!-- TIMER EN HAUT -->
   <div class="top-bar">
     <div class="timer" id="timer">35:00</div>
+    <p>⌛</p>
   </div>
 
   <!-- ZONE PRINCIPALE -->
@@ -44,7 +45,7 @@
     <!-- MENU LATÉRAL -->
     <div class="sidebar">
       <button id="pauseBtn" onclick="pauseTimer()">Pause</button>
-      <button onclick="openKeypad()">🔢 Code</button>
+      <button onclick="openKeypad()">Code</button>
       <button onclick="goBackMenu()">⬅ Retour</button>
     </div>
 
@@ -57,7 +58,7 @@
 <!-- POPUP KEYPAD -->
 <div id="keypadModal" class="modal" style="display:none;">
   <div class="modal-content">
-    <h3>Entrer le code</h3>
+    <h3>Entrez le code</h3>
 
     <div id="codeDisplayModal">----</div>
 
@@ -72,6 +73,7 @@
       <button onclick="addDigit('8')">8</button>
       <button onclick="addDigit('9')">9</button>
       <button onclick="addDigit('0')">0</button>
+      <button onclick="checkCode()">Valider</button>
     </div>
 
     <button onclick="closeKeypad()">Fermer</button>
@@ -106,6 +108,13 @@
     <p>Un tiroir avec plein de recherches que l’on a déjà fait…
       Peut être qu’on va trouver des indices. Mais on a pas la clé…</p>
     <button onclick="closePopup('blue')">Fermer</button>
+  </div>
+</div>
+
+<div id="popup-enigme" class="modal" style="display:none;">
+  <div class="modal-content">
+    <p>Bravo !</p>
+    <button onclick="closePopup('enigme')">Fermer</button>
   </div>
 </div>
 
@@ -176,8 +185,7 @@
   function addDigit(digit) {
     if (enteredCode.length < 4) {
       enteredCode += digit;
-      document.getElementById("codeDisplay").textContent = enteredCode;
-      document.getElementById("codeDisplayModal").textContent = enteredCode;
+      document.getElementById("codeDisplayModal").textContent = enteredCode.padEnd(4, "-");
     }
   }
 
@@ -196,6 +204,19 @@
 
   function closePopup(color) {
     document.getElementById("popup-" + color).style.display = "none";
+  }
+
+  function checkCode() {
+    if (enteredCode === "56") {
+      closeKeypad();
+      openPopup("enigme"); // 👉 ouvre la popup associée
+    } else {
+      alert("❌ Mauvais code !");
+    }
+
+    // reset du code après validation
+    enteredCode = "";
+    document.getElementById("codeDisplayModal").textContent = "----";
   }
   updateDisplay();
 </script>
