@@ -40,6 +40,7 @@
       <button class="map-btn orange" onclick="openPopup('orange')">❓</button>
       <button class="map-btn pink" onclick="openPopup('pink')">❓</button>
       <button class="map-btn blue" onclick="openPopup('blue')">❓</button>
+      <button id="removeBtn" onclick="removeSelectedButton()">Supprimer le bouton choisi</button>
     </div>
 
     <!-- MENU LATÉRAL -->
@@ -84,7 +85,6 @@
   <div class="modal-content">
     <p>Plein d’écrans endommagés... On distingue mal l’algue mutante,
       elle a l'air immense... D’où vient elle ? Comment s’en débarrasser ?</p>
-    <button onclick="closePopup('green')">Fermer</button>
   </div>
 </div>
 
@@ -92,14 +92,12 @@
   <div class="modal-content">
     <p>Un écran montrant les taux d’oxygène, d’essence…
       On est mal… Combien de temps il nous reste ? </p>
-    <button onclick="closePopup('orange')">Fermer</button>
   </div>
 </div>
 
 <div id="popup-pink" class="modal" style="display:none;">
   <div class="modal-content">
     <p> Le “guidon”, si on force un peu… Peut-être qu’on pourrait réussir à se dégager ?</p>
-    <button onclick="closePopup('pink')">Fermer</button>
   </div>
 </div>
 
@@ -107,7 +105,6 @@
   <div class="modal-content">
     <p>Un tiroir avec plein de recherches que l’on a déjà fait…
       Peut être qu’on va trouver des indices. Mais on a pas la clé…</p>
-    <button onclick="closePopup('blue')">Fermer</button>
   </div>
 </div>
 
@@ -189,23 +186,6 @@
     }
   }
 
-
-  function openPopup(popup) {
-
-    // 🔒 Fermer toutes les popups
-    const popups = document.querySelectorAll("[id^='popup-']");
-    popups.forEach(popup => {
-      popup.style.display = "none";
-    });
-
-    // ✅ Ouvrir celle cliquée
-    document.getElementById("popup-" + popup).style.display = "flex";
-  }
-
-  function closePopup(popup) {
-    document.getElementById("popup-" + popup).style.display = "none";
-  }
-
   function checkCode() {
     if (enteredCode === "56") {
       closeKeypad();
@@ -218,6 +198,52 @@
     enteredCode = "";
     document.getElementById("codeDisplayModal").textContent = "----";
   }
+
+  function openPopup(name) {
+    const popups = document.querySelectorAll("[id^='popup-']");
+    popups.forEach(p => p.style.display = "none");
+
+    document.getElementById("popup-" + name).style.display = "flex";
+
+    // ✅ on mémorise le bouton sélectionné
+    selectedButton = name;
+  }
+
+  let selectedButton = null;
+  let buttonAlreadyRemoved = false;
+
+
+  function removeSelectedButton() {
+    if (buttonAlreadyRemoved) return;
+
+    if (!selectedButton) {
+      alert("❌ Aucun bouton sélectionné !");
+      return;
+    }
+
+    // cacher le bouton sur la map
+    const btn = document.querySelector(`.map-btn.${selectedButton}`);
+    if (btn) btn.style.display = "none";
+
+    // fermer la popup
+    closePopup(selectedButton);
+
+    buttonAlreadyRemoved = true;
+
+    // cacher le bouton "Supprimer"
+    document.getElementById("removeBtn").style.display = "none";
+
+    // afficher la suite
+    openPopup("enigme");
+    document.querySelector("#popup-enigme p").textContent =
+            "Jetez les cartes 14, 56 et 32";
+  }
+
+  function closePopup(name) {
+    document.getElementById("popup-" + name).style.display = "none";
+  }
+
+
   updateDisplay();
 </script>
 
