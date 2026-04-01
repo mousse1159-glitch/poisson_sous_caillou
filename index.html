@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css" media="screen" />
+    <title>Unlock!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="game-container">
+        <div id="scene" class="scene active">
+
+            <!-- Header -->
+            <header class="game-header">
+                <div class="logo-area">
+                    <span class="logo-text">UNLOCK<span class="logo-bang">!</span></span>
+                    <span class="logo-sub">ESCAPE ADVENTURES</span>
+                </div>
+                <div class="header-right">
+                    <span class="scenario-name">Scénario 1</span>
+                </div>
+            </header>
+
+            <!-- Main timer zone -->
+            <div class="timer-zone">
+                <div class="timer-glow-ring" id="glowRing">
+                    <div class="timer-inner">
+                        <div class="timer-label">TEMPS RESTANT</div>
+                        <div class="timer-display" id="timerDisplay">35:00</div>
+                        <div class="timer-progress-bar">
+                            <div class="timer-progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="btn-start" id="startBtn" onclick="toggleTimer()">
+                    <span class="btn-icon" id="btnIcon">▶</span>
+                    <span class="btn-label" id="btnLabel">DÉMARRER</span>
+                </button>
+                <button class="btn-reset" id="resetBtn" onclick="resetTimer()">
+                    <span class="btn-icon">↺</span>
+                    <span class="btn-label">RESET</span>
+                </button>
+            </div>
+
+            <!-- Penalty zone -->
+            <div class="penalty-zone">
+                <div class="penalty-title">PÉNALITÉS</div>
+                <div class="penalty-controls">
+                    <button class="penalty-btn" onclick="addPenalty()">+ 2 MIN</button>
+                    <div class="penalty-count" id="penaltyCount">0</div>
+                    <div class="penalty-label">pénalités</div>
+                </div>
+            </div>
+
+            <!-- Bottom atmosphere bar -->
+            <div class="atmosphere-bar">
+                <div class="atm-item">
+                    <span class="atm-icon">🔒</span>
+                    <span class="atm-text">VERROUS</span>
+                    <span class="atm-val" id="locksFound">0</span>
+                </div>
+                <div class="atm-divider"></div>
+                <div class="atm-item">
+                    <span class="atm-icon">💡</span>
+                    <span class="atm-text">INDICES</span>
+                    <span class="atm-val" id="hintsUsed">0</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="inventory" class="inventory"></div>
+
+        <!-- Overlay fin de partie -->
+        <div class="end-overlay" id="endOverlay">
+            <div class="end-box">
+                <div class="end-icon">⏱</div>
+                <div class="end-title">TEMPS ÉCOULÉ !</div>
+                <div class="end-sub">La mission a échoué.</div>
+                <button class="btn-start" onclick="resetTimer()">
+                    <span class="btn-icon">↺</span>
+                    <span class="btn-label">RECOMMENCER</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
