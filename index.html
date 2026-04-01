@@ -31,8 +31,14 @@
 
     <!-- MAP -->
     <div class="map">
-  <img src="ressources/images/map.png" alt="Carte du jeu">
-</div>
+      <img src="ressources/images/map.png" alt="Carte du jeu">
+
+      <!-- BOUTONS -->
+      <button class="map-btn green" onclick="openPopup('green')">❓</button>
+      <button class="map-btn orange" onclick="openPopup('orange')">❓</button>
+      <button class="map-btn pink" onclick="openPopup('pink')">❓</button>
+      <button class="map-btn blue" onclick="openPopup('blue')">❓</button>
+    </div>
 
     <!-- MENU LATÉRAL -->
     <div class="sidebar">
@@ -68,6 +74,38 @@
     </div>
 
     <button onclick="closeKeypad()">Fermer</button>
+  </div>
+</div>
+
+<div id="popup-green" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Point vert</h3>
+    <p>Contenu du point vert</p>
+    <button onclick="closePopup('green')">Fermer</button>
+  </div>
+</div>
+
+<div id="popup-orange" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Point orange</h3>
+    <p>Contenu du point orange</p>
+    <button onclick="closePopup('orange')">Fermer</button>
+  </div>
+</div>
+
+<div id="popup-pink" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Point rose</h3>
+    <p>Contenu du point rose</p>
+    <button onclick="closePopup('pink')">Fermer</button>
+  </div>
+</div>
+
+<div id="popup-blue" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Point bleu</h3>
+    <p>Contenu du point bleu</p>
+    <button onclick="closePopup('blue')">Fermer</button>
   </div>
 </div>
 
@@ -141,6 +179,15 @@
       document.getElementById("codeDisplay").textContent = enteredCode;
       document.getElementById("codeDisplayModal").textContent = enteredCode;
     }
+  }
+
+
+  function openPopup(color) {
+    document.getElementById("popup-" + color).style.display = "flex";
+  }
+
+  function closePopup(color) {
+    document.getElementById("popup-" + color).style.display = "none";
   }
   updateDisplay();
 </script>
