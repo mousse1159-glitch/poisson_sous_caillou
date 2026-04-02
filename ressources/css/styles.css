@@ -19,13 +19,13 @@ h2 {
 
 .panel {
   background: #111;
-  border: 2px solid #00ff88;
+  border: 2px solid #005666;
   padding: 20px;
   border-radius: 15px;
   width: 90vw;      /* prend presque toute la largeur écran */
   max-width: 1200px;
   text-align: center;
-  box-shadow: 0 0 20px #00ff88;
+  box-shadow: 0 0 20px #005666;
 }
 
 .timer {
@@ -170,7 +170,7 @@ button {
   background: #111;
   color: #00ff88;
 
-  padding: 20px;
+  padding: 90px;
   border-radius: 15px;
 
   width: 90%;
