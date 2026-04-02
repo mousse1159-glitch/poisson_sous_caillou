@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="fix chemins css et js">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +97,7 @@
       <updated>1775047052736</updated>
       <workItem from="1775047053945" duration="5431000" />
       <workItem from="1775087117060" duration="8000" />
-      <workItem from="1775116614758" duration="2198000" />
+      <workItem from="1775116614758" duration="2546000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit">
       <option name="closed" value="true" />
@@ -373,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775086713800</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix chemins css et js">
+      <option name="closed" value="true" />
+      <created>1775122938550</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1775122938551</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
