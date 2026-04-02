@@ -180,3 +180,63 @@ button {
 
   box-shadow: 0 0 20px #00ff88;
 }
+
+@media (min-width: 768px) {
+
+  body {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .panel {
+    width: 80vw;
+    padding: 30px;
+  }
+
+  .timer {
+    font-size: 60px;
+  }
+
+  /* 👉 layout horizontal sur ordi */
+  .game-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .map {
+    width: 70%;
+  }
+
+  .sidebar {
+    width: 30%;
+    flex-direction: column; /* 👈 redevient vertical */
+    margin-top: 0;
+  }
+
+  .sidebar button {
+    height: 70px;
+    font-size: 18px;
+  }
+
+  /* 👉 boutons carte plus gros */
+  .map-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 26px;
+  }
+
+  /* 👉 popup plus grande */
+  .modal-content {
+    max-width: 500px;
+    font-size: 20px;
+  }
+
+  /* 👉 keypad plus confortable */
+  .keypad button {
+    font-size: 24px;
+    padding: 25px;
+  }
+}
