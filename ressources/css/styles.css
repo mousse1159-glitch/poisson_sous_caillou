@@ -4,10 +4,19 @@ body {
   background: #000;
   color: #00ff88;
   font-family: monospace;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+button {
+
 }
 
 .panel {
@@ -27,11 +36,13 @@ body {
 }
 
 button {
-  padding: 10px;
   margin: 5px;
   border: none;
   cursor: pointer;
   font-family: monospace;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
 }
 
 .start { background: #00aa55; }
@@ -47,7 +58,10 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-top: 10px;
+  font-size: 22px;
+  padding: 20px;
 }
+
 
 .keypad button {
   padding: 15px;
@@ -72,7 +86,8 @@ button {
 
 .game-container {
   display: flex;
-  height: 60vh;
+  flex-direction: column; /* 👈 passe en vertical */
+  align-items: center;
 }
 
 
@@ -87,18 +102,19 @@ button {
 /* IMAGE DE LA MAP */
 .map img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;  /* garde les proportions */
 }
+
 
 /* Boutons sur la map */
 .map-btn {
   position: absolute;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
   cursor: pointer;
 }
 
@@ -110,9 +126,13 @@ button {
 
 /* MENU LATÉRAL */
 /* SIDEBAR = 30% */
+
 .sidebar {
-  width: 200px;
-  min-width: 200px;
+  display: flex;
+  flex-direction: row; /* 👈 horizontal en bas */
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .sidebar button {
