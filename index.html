@@ -237,7 +237,17 @@
 
     document.getElementById("popup-" + name).style.display = "flex";
 
-    // ✅ on mémorise le bouton sélectionné
+    // 🔥 RESET tous les boutons
+    document.querySelectorAll(".map-btn").forEach(btn => {
+      btn.classList.remove("selected");
+    });
+
+    // 🔥 AJOUT sur le bon bouton
+    const currentBtn = document.querySelector(`.map-btn.${name}`);
+    if (currentBtn) {
+      currentBtn.classList.add("selected");
+    }
+
     selectedButton = name;
   }
 
