@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background: #000;
-  color: #00f790;
+  color: #00ff88;
   font-family: monospace;
   font-size: 18px;
   display: flex;
@@ -42,9 +42,9 @@ button {
 }
 
 .selected {
-  outline: 4px solid #ff00fb;
+  outline: 4px solid #ff0000;
   transform: scale(1.2);
-  box-shadow: 0 0 15px #ff00f2;
+  box-shadow: 0 0 15px #ff0000;
 }
 
 .start { background: #00aa55; }
