@@ -42,9 +42,9 @@ button {
 }
 
 .selected {
-  outline: 4px solid #ff0000;
+  outline: 4px solid #ff00fb;
   transform: scale(1.2);
-  box-shadow: 0 0 15px #ff0000;
+  box-shadow: 0 0 15px #ff00f2;
 }
 
 .start { background: #00aa55; }
