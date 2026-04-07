@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="changement des coordonnée">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="changement des coordonnée" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +19,12 @@
     &quot;assignee&quot;: &quot;mousse1159-glitch&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mousse1159-glitch/poisson_sous_caillou.git",
-    "accountId": "3e498ab2-0c09-4d27-8c3a-3c9680a7f6a1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mousse1159-glitch/poisson_sous_caillou.git&quot;,
+    &quot;accountId&quot;: &quot;3e498ab2-0c09-4d27-8c3a-3c9680a7f6a1&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
