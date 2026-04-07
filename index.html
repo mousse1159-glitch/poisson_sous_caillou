@@ -34,7 +34,7 @@
 
     <!-- MAP -->
     <div class="map">
-      <img src="ressources/images/map.png" alt="Carte du jeu">
+      <img src="ressources/images/salle 1.png" alt="Carte du jeu">
 
       <!-- BOUTONS -->
       <button class="map-btn green" onclick="openPopup('green')">❓</button>
@@ -108,7 +108,7 @@
 <div id="popup-pink" class="modal" style="display:none;">
   <div class="modal-content">
     <div id="pink-steps">
-    <p> Le “guidon”, si on force un peu… Peut-être qu’on pourrait réussir à se dégager ?</p>
+    <p> La “valve”, si on force un peu… Peut-être qu’on pourrait réussir à se dégager ?</p>
     <p class="hidden-step">➡ Piocher la carte 56...</p>
     </div>
     <button onclick="closePopup('pink')">Fermer</button>
@@ -280,12 +280,12 @@
     }
 
     if (selectedButton === "orange") {
-      message = "";
+      message = "Jetez la carte 14";
     }
 
     if (selectedButton === "pink") {
       message = "OUF ! Heureusement que vous avez pas fait ça... " +
-              "Jetez la carte 14";
+              "Jetez la carte 56";
     }
 
     if (selectedButton === "blue") {

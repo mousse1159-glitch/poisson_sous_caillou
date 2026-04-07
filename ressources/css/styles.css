@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background: #000;
-  color: #0019f7;
+  color: #00ff88;
   font-family: monospace;
   font-size: 18px;
   display: flex;
@@ -42,9 +42,9 @@ button {
 }
 
 .selected {
-  outline: 4px solid #ff00fb;
+  outline: 4px solid #811010;
   transform: scale(1.2);
-  box-shadow: 0 0 15px #ff00f2;
+  box-shadow: 0 0 15px #ff0000;
 }
 
 .start { background: #00aa55; }
@@ -121,10 +121,10 @@ button {
 }
 
 /* Couleurs */
-.green { background: green; top: 10%; left: 40%; }
-.orange { background: orange; top: 40%; left: 50%; }
-.pink { background: pink; top:60%; left: 40%; }
-.blue { background: #70afed; top: 80%; left: 50%; color: white; }
+.green { background: green; top: 35%; left: 20%; }
+.orange { background: orange; top: 40%; left: 70%; }
+.pink { background: pink; top:3%; left: 50%; }
+.blue { background: blue; top: 75%; left: 20%; color: white; }
 
 /* MENU LATÉRAL */
 /* SIDEBAR = 30% */
