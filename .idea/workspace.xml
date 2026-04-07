@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="message 4" />
+    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="changement des coordonnée">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,23 +101,7 @@
       <workItem from="1775116614758" duration="9368000" />
       <workItem from="1775225048236" duration="1628000" />
       <workItem from="1775493429203" duration="1618000" />
-      <workItem from="1775563145703" duration="3367000" />
-    </task>
-    <task id="LOCAL-00002" summary="fix chemins css et js">
-      <option name="closed" value="true" />
-      <created>1775053320836</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1775053320836</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fix chemins css et js">
-      <option name="closed" value="true" />
-      <created>1775053371453</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1775053371453</updated>
+      <workItem from="1775563145703" duration="4703000" />
     </task>
     <task id="LOCAL-00004" summary="fix chemins css et js">
       <option name="closed" value="true" />
@@ -493,7 +479,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775568049937</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="test changement de coordonée">
+      <option name="closed" value="true" />
+      <created>1775568432952</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1775568432953</updated>
+    </task>
+    <task id="LOCAL-00052" summary="changement des coordonnée">
+      <option name="closed" value="true" />
+      <created>1775568700276</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1775568700276</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,6 +555,8 @@
     <MESSAGE value="ajout texte reponse carte 4" />
     <MESSAGE value="yo" />
     <MESSAGE value="message 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="message 4" />
+    <MESSAGE value="test changement de coordonée" />
+    <MESSAGE value="changement des coordonnée" />
+    <option name="LAST_COMMIT_MESSAGE" value="changement des coordonnée" />
   </component>
 </project>
