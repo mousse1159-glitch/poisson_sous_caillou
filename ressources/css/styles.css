@@ -124,7 +124,7 @@ button {
 .green { background: green; top: 35%; left: 20%; }
 .orange { background: orange; top: 40%; left: 70%; }
 .pink { background: pink; top:3%; left: 50%; }
-.blue { background: blue; top: 75%; left: 20%; color: white; }
+.blue { background: #76a4fa; top: 75%; left: 20%; color: white; }
 
 /* MENU LATÉRAL */
 /* SIDEBAR = 30% */
