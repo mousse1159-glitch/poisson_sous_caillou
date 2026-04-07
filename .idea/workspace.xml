@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="changement des coordonnée" />
+    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="merge" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,15 +99,7 @@
       <workItem from="1775116614758" duration="9368000" />
       <workItem from="1775225048236" duration="1628000" />
       <workItem from="1775493429203" duration="1618000" />
-      <workItem from="1775563145703" duration="5363000" />
-    </task>
-    <task id="LOCAL-00006" summary="fix chemins css et js">
-      <option name="closed" value="true" />
-      <created>1775053874470</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1775053874470</updated>
+      <workItem from="1775563145703" duration="5664000" />
     </task>
     <task id="LOCAL-00007" summary="fix chemins css et js">
       <option name="closed" value="true" />
@@ -493,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775572579060</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="merge">
+      <option name="closed" value="true" />
+      <created>1775573135494</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1775573135494</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,6 +555,7 @@
     <MESSAGE value="message 4" />
     <MESSAGE value="test changement de coordonée" />
     <MESSAGE value="changement des coordonnée" />
-    <option name="LAST_COMMIT_MESSAGE" value="changement des coordonnée" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
 </project>
