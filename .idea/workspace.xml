@@ -19,12 +19,12 @@
     &quot;assignee&quot;: &quot;mousse1159-glitch&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mousse1159-glitch/poisson_sous_caillou.git",
-    "accountId": "3e498ab2-0c09-4d27-8c3a-3c9680a7f6a1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mousse1159-glitch/poisson_sous_caillou.git&quot;,
+    &quot;accountId&quot;: &quot;3e498ab2-0c09-4d27-8c3a-3c9680a7f6a1&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
