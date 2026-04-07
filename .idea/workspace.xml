@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="yo">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="message 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,15 +99,7 @@
       <workItem from="1775116614758" duration="9368000" />
       <workItem from="1775225048236" duration="1628000" />
       <workItem from="1775493429203" duration="1618000" />
-      <workItem from="1775563145703" duration="2921000" />
-    </task>
-    <task id="LOCAL-00001" summary="premier commit">
-      <option name="closed" value="true" />
-      <created>1775049158941</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1775049158941</updated>
+      <workItem from="1775563145703" duration="3367000" />
     </task>
     <task id="LOCAL-00002" summary="fix chemins css et js">
       <option name="closed" value="true" />
@@ -487,7 +477,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775567886069</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="message 4">
+      <option name="closed" value="true" />
+      <created>1775568002343</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1775568002343</updated>
+    </task>
+    <task id="LOCAL-00050" summary="message 4">
+      <option name="closed" value="true" />
+      <created>1775568049934</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1775568049937</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,6 +552,7 @@
     <MESSAGE value="fix chemins css et js" />
     <MESSAGE value="ajout texte reponse carte 4" />
     <MESSAGE value="yo" />
-    <option name="LAST_COMMIT_MESSAGE" value="yo" />
+    <MESSAGE value="message 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="message 4" />
   </component>
 </project>
