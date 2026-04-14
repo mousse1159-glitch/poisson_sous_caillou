@@ -74,8 +74,8 @@
       <button onclick="addDigit('7')">7</button>
       <button onclick="addDigit('8')">8</button>
       <button onclick="addDigit('9')">9</button>
-      <button onclick="addDigit('0')">0</button>
       <button onclick="deleteDigit()">effacer</button>
+      <button onclick="addDigit('0')">0</button>
       <button onclick="checkCode()">Valider</button>
     </div>
 
@@ -213,6 +213,12 @@
       document.getElementById("codeDisplayModal").textContent = enteredCode.padEnd(3);
     }
   }
+
+  function deleteDigit(){
+    enteredCode = enteredCode.slice(0, -1); // enlève le dernier chiffre
+    document.getElementById("codeDisplayModal").textContent = enteredCode;
+  }
+
 
   function checkCode() {
     if (enteredCode === "14") {
