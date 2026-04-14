@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="changement taille bouton">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,22 +102,6 @@
       <workItem from="1775225048236" duration="1628000" />
       <workItem from="1775493429203" duration="1618000" />
       <workItem from="1775563145703" duration="4703000" />
-    </task>
-    <task id="LOCAL-00008" summary="fix chemins css et js">
-      <option name="closed" value="true" />
-      <created>1775054179009</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1775054179009</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fix chemins css et js">
-      <option name="closed" value="true" />
-      <created>1775055915409</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1775055915409</updated>
     </task>
     <task id="LOCAL-00010" summary="fix chemins css et js">
       <option name="closed" value="true" />
@@ -496,7 +479,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775573054569</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="changement taille bouton">
+      <option name="closed" value="true" />
+      <created>1775573794814</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1775573794814</updated>
+    </task>
+    <task id="LOCAL-00058" summary="changement taille bouton">
+      <option name="closed" value="true" />
+      <created>1775573836111</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1775573836112</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +557,9 @@
     <MESSAGE value="message 4" />
     <MESSAGE value="test changement de coordonée" />
     <MESSAGE value="changement des coordonnée" />
+    <MESSAGE value="modification keypad" />
     <MESSAGE value="changement taille bouton" />
-    <option name="LAST_COMMIT_MESSAGE" value="changement taille bouton" />
+    <MESSAGE value="ajout bouton supprimé ?" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout bouton supprimé ?" />
   </component>
 </project>
