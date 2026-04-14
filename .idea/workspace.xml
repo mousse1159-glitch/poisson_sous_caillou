@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="changement taille bouton">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="merge" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +99,31 @@
       <workItem from="1775116614758" duration="9368000" />
       <workItem from="1775225048236" duration="1628000" />
       <workItem from="1775493429203" duration="1618000" />
-      <workItem from="1775563145703" duration="4703000" />
+      <workItem from="1775563145703" duration="5664000" />
+    </task>
+    <task id="LOCAL-00007" summary="fix chemins css et js">
+      <option name="closed" value="true" />
+      <created>1775053882829</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1775053882829</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix chemins css et js">
+      <option name="closed" value="true" />
+      <created>1775054179009</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1775054179009</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix chemins css et js">
+      <option name="closed" value="true" />
+      <created>1775055915409</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1775055915409</updated>
     </task>
     <task id="LOCAL-00010" summary="fix chemins css et js">
       <option name="closed" value="true" />
@@ -447,55 +469,31 @@
       <option name="project" value="LOCAL" />
       <updated>1775568700276</updated>
     </task>
-    <task id="LOCAL-00053" summary="changement taille bouton">
+    <task id="LOCAL-00053" summary="changement des coordonnée">
       <option name="closed" value="true" />
-      <created>1775572801711</created>
+      <created>1775572268932</created>
       <option name="number" value="00053" />
       <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1775572801711</updated>
+      <updated>1775572268932</updated>
     </task>
-    <task id="LOCAL-00054" summary="changement taille bouton">
+    <task id="LOCAL-00054" summary="changement des coordonnée">
       <option name="closed" value="true" />
-      <created>1775572884903</created>
+      <created>1775572579060</created>
       <option name="number" value="00054" />
       <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
-      <updated>1775572884906</updated>
+      <updated>1775572579060</updated>
     </task>
-    <task id="LOCAL-00055" summary="changement taille bouton">
+    <task id="LOCAL-00055" summary="merge">
       <option name="closed" value="true" />
-      <created>1775572999553</created>
+      <created>1775573135494</created>
       <option name="number" value="00055" />
       <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
-      <updated>1775572999553</updated>
+      <updated>1775573135494</updated>
     </task>
-    <task id="LOCAL-00056" summary="changement taille bouton">
-      <option name="closed" value="true" />
-      <created>1775573054569</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1775573054569</updated>
-    </task>
-    <task id="LOCAL-00057" summary="changement taille bouton">
-      <option name="closed" value="true" />
-      <created>1775573794814</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1775573794814</updated>
-    </task>
-    <task id="LOCAL-00058" summary="changement taille bouton">
-      <option name="closed" value="true" />
-      <created>1775573836111</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1775573836112</updated>
-    </task>
-    <option name="localTasksCounter" value="59" />
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,9 +555,7 @@
     <MESSAGE value="message 4" />
     <MESSAGE value="test changement de coordonée" />
     <MESSAGE value="changement des coordonnée" />
-    <MESSAGE value="modification keypad" />
-    <MESSAGE value="changement taille bouton" />
-    <MESSAGE value="ajout bouton supprimé ?" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout bouton supprimé ?" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
 </project>
