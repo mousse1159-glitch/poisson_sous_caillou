@@ -161,7 +161,15 @@
   }
 
   function showRules() {
-    alert("Lisez la carte d'introduction et appuyez sur START");
+    alert("Une équipe de valeureux chercheurs se sont rendus sur une planète austère pour y faire des analyses sur les fonds marins.\n" +
+            "Mais d’un coup, le sous-marin est attaqué par une énorme algue mutante ! Elle a fait beaucoup de dégâts, tout l’équipage est en panique ! Impossible de bouger et le sas de sauvetage a été inondé, heureusement que les portes blindées d’urgences se sont activées à temps. Mais la menace c’est le manque d’oxygène ! Vous avez 35 minutes pour découvrir d’où vient la menace pour pouvoir l’arrêter. \n" +
+            "Vous vous retrouvez tout les 4 dans la salle de contrôle pour en discuter et chercher des indices qui vous permettraient de comprendre comment vous sortir de cette situation.\n" +
+            "L'équipe est constitué de:\n" +
+            "Le capitaine\n" +
+            "Le scientifique\n" +
+            "L’ingénieur\n" +
+            "Le plongeur\n" +
+            "Appuyez sur START pour commencer.")
   }
 
   function updateDisplay() {
@@ -320,6 +328,7 @@
     const hiddenElements = document.querySelectorAll(".hidden-step");
 
     hiddenElements.forEach(el => {
+      constNeeded = parseInt(el.dataset.step)
       el.style.display = "block";
     });
 

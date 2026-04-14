@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="salle 1">
+    <list default="true" id="dfe74df5-4c97-403f-8356-8ec74220e89a" name="Changes" comment="énigme 1,2 et 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -103,14 +103,6 @@
       <workItem from="1775225048236" duration="1628000" />
       <workItem from="1775493429203" duration="1618000" />
       <workItem from="1775563145703" duration="5664000" />
-    </task>
-    <task id="LOCAL-00009" summary="fix chemins css et js">
-      <option name="closed" value="true" />
-      <created>1775055915409</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1775055915409</updated>
     </task>
     <task id="LOCAL-00010" summary="fix chemins css et js">
       <option name="closed" value="true" />
@@ -496,7 +488,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776166122420</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="énigme 1,2 et 3">
+      <option name="closed" value="true" />
+      <created>1776168120211</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1776168120211</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,6 +562,7 @@
     <MESSAGE value="changement taille bouton" />
     <MESSAGE value="bouton supprimé" />
     <MESSAGE value="salle 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="salle 1" />
+    <MESSAGE value="énigme 1,2 et 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="énigme 1,2 et 3" />
   </component>
 </project>
