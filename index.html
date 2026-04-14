@@ -208,19 +208,26 @@
   }
 
   function addDigit(digit) {
-    if (enteredCode.length < 4) {
+    if (enteredCode.length < 3) {
       enteredCode += digit;
-      document.getElementById("codeDisplayModal").textContent = enteredCode.padEnd(4);
+      document.getElementById("codeDisplayModal").textContent = enteredCode.padEnd(3);
     }
   }
 
   function checkCode() {
     if (enteredCode === "14") {
+      closeKeypad();
+      openPopup("enigme");
       // 👉 action spéciale
       document.getElementById("timer").style.visibility = "visible";
     }
 
     else if (enteredCode === "56") {
+      closeKeypad();
+      openPopup("enigme");
+    }
+
+    else if (enteredCode === "4") {
       closeKeypad();
       openPopup("enigme");
     }
